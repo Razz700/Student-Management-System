@@ -348,6 +348,7 @@ let input=document.getElementById("in");
 btns.addEventListener("click",()=>{
     genf.remove();
     content.innerHTML=``;
+    input.value=input.value.trim();
     array.forEach((item,i)=>{
         if((input.value).toLowerCase()==(item.first_name).toLowerCase() || input.value.toLowerCase()==item.last_name.toLowerCase() || input.value.toLowerCase()==item.first_name.toLowerCase()+item.last_name.toLowerCase() || input.value.toLowerCase()==item.first_name.toLowerCase()+" "+item.last_name.toLowerCase() || input.value.toLowerCase()==item.email.toLowerCase()){
             content.innerHTML+=`<tr><td>${item.id}</td>
